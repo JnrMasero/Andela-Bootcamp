@@ -1,9 +1,11 @@
 """Print a Fibonacci sequence up to n."""
+    
+def fib(n):
+    x = []
+    a, b = 0, 1
+    for i in range(n):
+        x.append(a)
+        a, b = b, a+b
 
-def fib():
-    a,b = 1,1
-    num=eval(input("Enter Fib Nummber to be calculated: "))
-    num_int=int(num-2)
-    for i in range (num_int):
-        a,b=b,a+b
-    print(b)
+    x.append(b)
+    return x    
